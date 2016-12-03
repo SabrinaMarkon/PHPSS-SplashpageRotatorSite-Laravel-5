@@ -97,6 +97,10 @@ Route::get('admin/content', function () {
     return view('pages.admin.content');
 });
 
+Route::get('admin/mailout', function () {
+    return view('pages.admin.mailout');
+});
+
 Route::get('admin/faqs', function () {
     return view('pages.admin.faqs');
 });
