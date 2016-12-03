@@ -3,17 +3,18 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-//use App\Controllers\PagesController;
 
 class RoutesTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Test each route to make sure view and content exists.
      *
      * @return void
      */
     public function testRoutesExist()
     {
+        // MAIN ROUTES
+
         $this->visit('/')
             ->see('Eagle Ads');
 
@@ -33,7 +34,7 @@ class RoutesTest extends TestCase
             ->see('Forgot Your Login?');
 
         $this->visit('faqs')
-            ->see('FAQ');
+            ->see('F.A.Q.');
 
         $this->visit('terms')
             ->see('Terms');
@@ -44,11 +45,48 @@ class RoutesTest extends TestCase
         $this->visit('support')
             ->see('Support');
 
+        // MEMBER ROUTES
+
         $this->visit('account')
             ->see('Welcome');
 
         $this->visit('profile')
             ->see('Update Account');
+
+        $this->visit('promote')
+            ->see('Promote');
+
+        // ADMIN ROUTES
+
+        $this->visit('admin')
+            ->see('Admin Login');
+
+        $this->visit('admin/main')
+            ->see('Your Admin Area');
+
+        $this->visit('admin/forgot')
+            ->see('Forgot Your Login?');
+
+        $this->visit('admin/settings')
+            ->see('Site Settings');
+
+        $this->visit('admin/members')
+            ->see('Members');
+
+        $this->visit('admin/transactions')
+            ->see('Site Transactions');
+
+        $this->visit('admin/content')
+            ->see('Edit Pages');
+
+        $this->visit('admin/faqs')
+            ->see('F.A.Q.s');
+
+        $this->visit('admin/promotionals')
+            ->see('Promotional Ads');
+
+
+
 
     }
 }
