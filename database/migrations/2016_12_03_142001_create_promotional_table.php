@@ -15,6 +15,11 @@ class CreatePromotionalTable extends Migration
     {
         Schema::create('promotional', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 255);
+            $table->string('type', 12)->default('banner');
+            $table->string('p_image', 255);
+            $table->string('p_subject', 255);
+            $table->longText('p_message');
             $table->timestamps();
         });
     }

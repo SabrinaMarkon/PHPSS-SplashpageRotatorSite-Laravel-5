@@ -15,6 +15,12 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('userid', 255);
+            $table->string('transaction', 255);
+            $table->string('description', 255);
+            $table->dateTime('datepaid');
+            $table->decimal('amount', 9, 2);
+            $table->foreign('userid')->references('userid')->on('members');
             $table->timestamps();
         });
     }
