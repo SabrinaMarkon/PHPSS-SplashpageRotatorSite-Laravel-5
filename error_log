@@ -1,0 +1,65 @@
+[03-Dec-2016 19:50:16 UTC] PHP Fatal error:  Class 'App\Http\Controllers\PageController' not found in /home/eagleads/laravel/tests/PageControllerTest.php on line 18
+[03-Dec-2016 19:50:16 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[03-Dec-2016 19:51:14 UTC] PHP Fatal error:  Class 'PageController' not found in /home/eagleads/laravel/tests/PageControllerTest.php on line 19
+[03-Dec-2016 19:51:14 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[03-Dec-2016 19:52:25 UTC] PHP Fatal error:  Call to undefined method App\Http\Controllers\PagesController::add() in /home/eagleads/laravel/tests/PagesControllerTest.php on line 18
+[03-Dec-2016 19:52:25 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[03-Dec-2016 19:58:14 UTC] PHP Fatal error:  Class 'PagesController' not found in /home/eagleads/laravel/tests/PagesControllerTest.php on line 19
+[03-Dec-2016 19:58:14 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[12-Jan-2017 21:49:42 UTC] PHP Fatal error:  Call to undefined method MainNavLinkTest::visit() in /home/eagleads/laravel/tests/MainNavLinkTest.php on line 17
+[12-Jan-2017 21:50:43 UTC] PHP Fatal error:  Call to undefined method MainNavLinkTest::visit() in /home/eagleads/laravel/tests/MainNavLinkTest.php on line 17
+[12-Jan-2017 21:50:55 UTC] PHP Fatal error:  Call to undefined method RoutesTest::visit() in /home/eagleads/laravel/tests/RoutesTest.php on line 19
+[12-Jan-2017 21:50:55 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[12-Jan-2017 21:51:44 UTC] PHP Fatal error:  Call to undefined method RoutesTest::visit() in /home/eagleads/laravel/tests/RoutesTest.php on line 19
+[12-Jan-2017 21:51:44 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[13-Jan-2017 02:26:16 UTC] PHP Fatal error:  Call to undefined method MainNavLinkTest::visit() in /home/eagleads/laravel/tests/MainNavLinkTest.php on line 17
+[13-Jan-2017 02:26:16 UTC] PHP Fatal error:  Uncaught exception 'Illuminate\Contracts\Container\BindingResolutionException' with message 'Target [Illuminate\Contracts\Debug\ExceptionHandler] is not instantiable.' in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:763
+Stack trace:
+#0 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(644): Illuminate\Container\Container->build('Illuminate\\Cont...', Array)
+#1 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(709): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
+#3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
+#4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[19-Jan-2017 18:07:49 UTC] PHP Fatal error:  Undefined constant 'Illuminate\Foundation\Testing\DatabaseMigrations' in /home/eagleads/laravel/tests/integration/models/PageTest.php on line 4
+[19-Jan-2017 18:16:05 UTC] PHP Fatal error:  Class 'App\Page' not found in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Database/Eloquent/FactoryBuilder.php on line 167
+[19-Jan-2017 20:22:33 UTC] PHP Fatal error:  Call to undefined function first() in /home/eagleads/laravel/tests/integration/models/PageTest.php on line 51
+[19-Jan-2017 20:48:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/eagleads/laravel/routes/web.php on line 119
+[19-Jan-2017 20:51:02 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Page' not found in /home/eagleads/laravel/app/Http/Controllers/PagesController.php on line 100
+[19-Jan-2017 20:54:21 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Session' not found in /home/eagleads/laravel/app/Http/Controllers/PagesController.php on line 102
+[19-Jan-2017 20:56:55 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Session' not found in /home/eagleads/laravel/app/Http/Controllers/PagesController.php on line 102

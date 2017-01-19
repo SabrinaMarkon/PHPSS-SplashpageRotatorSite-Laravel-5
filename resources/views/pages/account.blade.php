@@ -8,7 +8,7 @@
 
 @section('pagetitle')
 
-    Welcome to Eagle Ads!
+    Welcome to {{ $sitename }}
 
 @stop
 

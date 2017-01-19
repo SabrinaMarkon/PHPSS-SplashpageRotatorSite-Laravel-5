@@ -108,3 +108,14 @@ Route::get('admin/faqs', function () {
 Route::get('admin/promotionals', function () {
     return view('pages.admin.promotionals');
 });
+
+/*
+ * Custom pages added by the admin
+ * IMPORTANT: this must be the last route or core pages such as faqs will
+ * be treated as a custom page instead of a core. This causes them to show the
+ * admin's text they add but not any database data.
+ */
+Route::get('{page}', 'PagesController@custompage');
+
+
+//Route::get('{page}/{referid}', 'PagesController@custompage');

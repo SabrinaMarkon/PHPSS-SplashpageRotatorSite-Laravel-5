@@ -8,7 +8,7 @@
 
 @section('pagetitle')
 
-    Financial Transactions
+    Site Transactions
 
 @stop
 

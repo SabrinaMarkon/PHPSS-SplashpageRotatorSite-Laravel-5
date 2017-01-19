@@ -17,7 +17,7 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('name', 255)->unique();
             $table->string('slug', 255)->unique();
-            $table->boolean('core')->default(true);
+            $table->boolean('core')->default(false);
             $table->longText('htmlcode');
             $table->timestamps();
         });
