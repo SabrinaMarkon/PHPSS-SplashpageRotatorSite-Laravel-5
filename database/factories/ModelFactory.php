@@ -24,6 +24,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 /**
  * seed test database with html page content for hypothetical admin pages.
+ * IMPORTANT: FACTORY->DEFINE MAKES 1 INSTANCE..1 record! So assertsCount will fail if you don't account for this.
  */
 $factory->define(App\Models\Page::class, function (Faker\Generator $faker) {
     return [
