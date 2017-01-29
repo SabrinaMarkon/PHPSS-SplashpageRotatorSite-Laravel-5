@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  background-image: url("http://eagleads.phpsitescripts.com/images/wheat.jpg");
   background-color: #000; }
 
 .fixed-bg {
@@ -22,27 +23,28 @@ body {
   min-height: 1300px; }
 
 .ParallaxVideo {
-  height: 800px;
-  padding-bottom: 50px;
-  padding-top: 50px; }
+  min-height: 900px;
+  padding-top: 110px;
+}
   .ParallaxVideo video {
     min-width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: -999;
     background: transparent url("http://eagleads.phpsitescripts.com/images/wheat.jpg") no-repeat 0 0; }
   .ParallaxVideo h1 {
     color: #fff;
-    font-size: 8em;
+    font-size: 9em;
     line-height: 1.1;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.9;
     font-family: "Cinzel", serif;
     font-weight: 400;
     text-shadow: 2px 2px 2px #000;
     margin: 0; }
   .ParallaxVideo h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     text-shadow: 2px 2px 2px #000;
     margin: 0; }
   .ParallaxVideo .overlay {
@@ -58,5 +60,11 @@ body {
   background: #fff;
   min-height: 200px;
   opacity: 0.3; }
-
+.container {
+  width: 100%;
+  background: #fff;
+}
+.container .footer {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

@@ -15,8 +15,6 @@
 
             @include('includes.header')
 
-            {{--<div class="sadie"></div>--}}
-
             <div class="content">
                 <div class="title">
                     @yield('pagetitle')
