@@ -1,9 +1,26 @@
 body {
   padding: 0;
   margin: 0;
-  background-image: url("http://eagleads.phpsitescripts.com/images/wheat.jpg");
   background-color: #000; }
 
+/* Top Navbar */
+.navbar-ea {
+  opacity: 0.8;
+  background: #fff;
+  box-shadow: 2px 2px 2px #000; }
+  .navbar-ea .navbar-nav {
+    float: none;
+    text-align: center; }
+    .navbar-ea .navbar-nav li {
+      font-family: "Cinzel", serif;
+      font-size: 1.5em;
+      float: none;
+      display: inline-block; }
+      .navbar-ea .navbar-nav li a {
+        color: #000;
+        text-shadow: 2px 2px 1px #fff, -2px -2px 1px #fff; }
+
+/* Sections */
 .fixed-bg {
   background-position: center;
   background-repeat: no-repeat;
@@ -22,13 +39,13 @@ body {
   background-image: url("http://eagleads.phpsitescripts.com/images/greenmountaincross.jpg");
   min-height: 1300px; }
 
+/* Video */
 .ParallaxVideo {
-  min-height: 900px;
-  padding-top: 110px;
-}
+  height: 900px;
+  padding-top: 110px; }
   .ParallaxVideo video {
     min-width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -999;
@@ -56,15 +73,51 @@ body {
       font-family: "Cinzel", serif;
       margin: 0; }
 
+.fa {
+  padding: 3px; }
+
 .whitetransparent {
   background: #fff;
   min-height: 200px;
   opacity: 0.3; }
+
+/* Footer */
 .container {
   width: 100%;
-  background: #fff;
-}
-.container .footer {
-  text-align: center;
-}
+  background: #fff; }
+  .container .footer {
+    text-align: center; }
+
+/* Media Queries */
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .ParallaxVideo h1 {
+    font-size: 2em; }
+  .ParallaxVideo h2 {
+    font-size: 1em; } }
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .ParallaxVideo h1 {
+    font-size: 4em; }
+  .ParallaxVideo h2 {
+    font-size: 2em; } }
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .ParallaxVideo h1 {
+    font-size: 8em; } }
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .ParallaxVideo h1 {
+    font-size: 9em; } }
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .ParallaxVideo h1 {
+    font-size: 10em; }
+  .ParallaxVideo h2 {
+    font-size: 3em; } }
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .ParallaxVideo h1 {
+    font-size: 11em; } }
+
 /*# sourceMappingURL=style.css.map */
