@@ -16,9 +16,6 @@
             @include('includes.header')
 
             <div class="content">
-                <div class="title">
-                    @yield('pagetitle')
-                </div>
 
                 <div>
                     @yield('heading')

@@ -2,11 +2,17 @@ $headingfont : "Cinzel", serif;
 $contentfont: "Raleway", sans-serif;
 $textshadow : 2px 2px 2px #000;
 $boxshadow : 2px 2px 2px #000;
+$boxshadowtop : -2px -2px 2px #000;
 
 body {
   padding: 0;
   margin: 0;
   background-color: #000;
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Top Navbar */
@@ -47,7 +53,7 @@ body {
   background-attachment: fixed;
 }
 .fixed-bg1 {
-  background-image: url('http://eagleads.phpsitescripts.com/images/eaglenest.jpg');
+  background-image: url('http://eagleads.phpsitescripts.com/images/shiningwaters.jpg');
   min-height: 928px;
 }
 .fixed-bg2 {
@@ -55,11 +61,12 @@ body {
   min-height: 1142px;
 }
 .fixed-bg3 {
-  background-image: url('http://eagleads.phpsitescripts.com/images/greenmountaincross.jpg');
+  background-image: url('http://eagleads.phpsitescripts.com/images/eaglenest.jpg');
   min-height: 1300px;
 }
 
 /* Video */
+video { display: block; } /* IE 8 */
 .ParallaxVideo {
   min-height: 900px;
   padding-top: 110px;
@@ -76,7 +83,7 @@ body {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url('http://eagleads.phpsitescripts.com/images/eaglenest.jpg') no-repeat;
+    background: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg') no-repeat;
     background-size: cover;
   }
   h1 {
@@ -107,7 +114,27 @@ body {
     }
   }
 }
+/* Switch off video for smaller devices */
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross_sm.jpg') #000 no-repeat center center fixed;
+  }
+  #bgvideo {
+    display: none;
+  }
+}
 
+.title {
+  color: #fff;
+  font-size: 5em;
+  line-height: 1.1;
+  text-align: center;
+  opacity: 1.0;
+  font-family: $headingfont;
+  font-weight: 400;
+  text-shadow: $textshadow;
+  padding: 1em;
+}
 .fa {
   padding: 3px;
 }
@@ -116,11 +143,20 @@ body {
   min-height: 200px;
   opacity: 0.3;
 }
+.blacktransparent {
+  background: #000;
+  opacity: 0.5;
+  width: 100%;
+  margin-top: 4em;
+}
 
 /* Footer */
-.container {
+.footercontainer {
   width: 100%;
   background: #fff;
+  position: fixed;
+  box-shadow: $boxshadowtop;
+  bottom: 0;
   .footer {
     text-align: center;
   }

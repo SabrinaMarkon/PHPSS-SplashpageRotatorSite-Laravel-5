@@ -6,18 +6,18 @@
 @stop
 
 
-@section('pagetitle')
-
-    About Us
-
-@stop
-
-
 @section('content')
 
-    @if(Session::has('page'))
-        {!! Session::get('page')->htmlcode !!}
-    @endif
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            About Us
+        </div>
+
+        @if(Session::has('page'))
+            {!! Session::get('page')->htmlcode !!}
+        @endif
+    </div>
 
 @stop
 
