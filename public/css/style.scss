@@ -8,13 +8,24 @@ body {
   padding: 0;
   margin: 0;
   background-color: #000;
-  background-image: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg');
 }
-
+.body_about {
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg');
+}
+.body_terms {
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/bluemountains.jpg');
+}
+.body_privacy {
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/mistyforest.jpg');
+}
+.body_success {
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/rivervalley.jpg');
+}
 /* Top Navbar */
 .navbar-ea {
   opacity: 0.8;

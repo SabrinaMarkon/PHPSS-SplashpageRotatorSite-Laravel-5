@@ -7,7 +7,7 @@
     @yield('header')
 </head>
 
-<body>
+<body class="body_{!! Route::getCurrentRoute()->getPath() !!}">
 
 <div class="container-fluid">
     <div id="main" class="row">
