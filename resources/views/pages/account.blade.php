@@ -6,14 +6,14 @@
 @stop
 
 
-@section('pagetitle')
-
-    Welcome to {{ $sitename }}
-
-@stop
-
-
 @section('content')
+
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            Welcome to {{ $sitename }}
+        </div>
+    </div>
 
     @if(Session::has('page'))
         {!! Session::get('page')->htmlcode !!}

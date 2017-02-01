@@ -97,17 +97,6 @@ video {
 
   #bgvideo {
     display: none; } }
-.title {
-  color: #fff;
-  font-size: 5em;
-  line-height: 1.1;
-  text-align: center;
-  opacity: 1.0;
-  font-family: "Cinzel", serif;
-  font-weight: 400;
-  text-shadow: 2px 2px 2px #000;
-  padding: 1em; }
-
 .fa {
   padding: 3px; }
 
@@ -118,9 +107,22 @@ video {
 
 .blacktransparent {
   background: #000;
-  opacity: 0.5;
+  opacity: 0.7;
   width: 100%;
+  min-height: 100px;
   margin-top: 4em; }
+
+.title {
+  color: #fff;
+  font-size: 5em;
+  line-height: 1.1;
+  text-align: center;
+  opacity: 1.0;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px #000;
+  padding: 0.5em;
+  padding-right: 1em; }
 
 /* Footer */
 .footercontainer {
@@ -138,30 +140,48 @@ video {
   .ParallaxVideo h1 {
     font-size: 2em; }
   .ParallaxVideo h2 {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  .title {
+    font-size: 2em; } }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   .ParallaxVideo h1 {
     font-size: 4em; }
   .ParallaxVideo h2 {
-    font-size: 2em; } }
+    font-size: 2em; }
+
+  .title {
+    font-size: 3em; } }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .ParallaxVideo h1 {
-    font-size: 8em; } }
+    font-size: 8em; }
+
+  .title {
+    font-size: 4em; } }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .ParallaxVideo h1 {
-    font-size: 9em; } }
+    font-size: 9em; }
+
+  .title {
+    font-size: 5em; } }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .ParallaxVideo h1 {
     font-size: 10em; }
   .ParallaxVideo h2 {
-    font-size: 3em; } }
+    font-size: 3em; }
+
+  .title {
+    font-size: 5em; } }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
   .ParallaxVideo h1 {
-    font-size: 11em; } }
+    font-size: 11em; }
+
+  .title {
+    font-size: 6em; } }
 
 /*# sourceMappingURL=style.css.map */

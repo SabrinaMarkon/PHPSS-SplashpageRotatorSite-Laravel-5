@@ -6,14 +6,14 @@
 @stop
 
 
-@section('pagetitle')
-
-    Thanks for Joining!
-
-@stop
-
-
 @section('content')
+
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            Thanks!
+        </div>
+    </div>
 
     @if(Session::has('page'))
         {!! Session::get('page')->htmlcode !!}

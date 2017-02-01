@@ -13,11 +13,11 @@
         <div class="title">
             About Us
         </div>
-
-        @if(Session::has('page'))
-            {!! Session::get('page')->htmlcode !!}
-        @endif
     </div>
+
+    @if(Session::has('page'))
+        {!! Session::get('page')->htmlcode !!}
+    @endif
 
 @stop
 
