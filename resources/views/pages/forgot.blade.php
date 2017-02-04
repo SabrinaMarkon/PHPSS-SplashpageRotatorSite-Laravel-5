@@ -6,14 +6,18 @@
 @stop
 
 
-@section('pagetitle')
-
-    Forgot Your Login?
-
-@stop
-
-
 @section('content')
+
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            Forgot Your Login?
+        </div>
+    </div>
+
+    @if(Session::has('page'))
+        {!! Session::get('page')->htmlcode !!}
+    @endif
 
     <div class="form-page-small">
 
@@ -34,7 +38,7 @@
             </form>
         </div>
     </div>
-
+    
 @stop
 
 

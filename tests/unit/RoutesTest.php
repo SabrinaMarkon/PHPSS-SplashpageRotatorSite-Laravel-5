@@ -26,7 +26,7 @@ class RoutesTest extends TestCase
 //            ->see('Join Us');
 //
         $this->visit('success')
-            ->see('Thanks for Joining');
+            ->see('Thanks!');
 //
 //        $this->visit('login')
 //            ->see('Member Login');

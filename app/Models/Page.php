@@ -14,7 +14,7 @@ class Page extends Model
     }
 
     public function scopeshowCustomPage($query, $take = 1) {
-        return $query->where('core', false)->take($take)->get();
+        return $query->where('core', false)->take($take)->first();
     }
 
     public function scopecountCustomPages($query) {

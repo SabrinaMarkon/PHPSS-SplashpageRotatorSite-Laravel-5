@@ -32,10 +32,13 @@ body {
       font-family: "Cinzel", serif;
       font-size: 1.5em;
       float: none;
-      display: inline-block; }
+      display: inline-block;
+      margin: 2px; }
       .navbar-ea .navbar-nav li a {
         color: #000;
         text-shadow: 2px 2px 1px #fff, -2px -2px 1px #fff; }
+      .navbar-ea .navbar-nav li:hover {
+        background: #eee; }
 
 /* Sections */
 .fixed-bg {
@@ -110,7 +113,7 @@ video {
   #bgvideo {
     display: none; } }
 .fa {
-  padding: 3px; }
+  padding-right: 3px; }
 
 .whitetransparent {
   background: #fff;
@@ -122,7 +125,8 @@ video {
   opacity: 0.7;
   width: 100%;
   min-height: 100px;
-  margin-top: 4em; }
+  margin-top: 4em;
+  box-shadow: -1px -1px 2px #fff; }
 
 .title {
   color: #fff;
@@ -140,6 +144,7 @@ video {
 .footercontainer {
   width: 100%;
   background: #fff;
+  opacity: 0.8;
   position: fixed;
   box-shadow: -2px -2px 2px #000;
   bottom: 0; }
