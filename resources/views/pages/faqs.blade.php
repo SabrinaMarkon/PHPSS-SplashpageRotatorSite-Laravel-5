@@ -25,7 +25,7 @@
 
             @foreach ($faqs as $faq)
 
-                <div class="panel panel-default text-left">
+                <div class="panel panel-info text-left">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $faq->positionnumber }}">{{ $faq->positionnumber }}. {{ $faq->question }}</a>

@@ -23,6 +23,9 @@ body {
 .body_support {
   background-image: url("http://eagleads.phpsitescripts.com/images/stills/soaringheights.jpg"); }
 
+.body_faqs {
+  background-image: url("http://eagleads.phpsitescripts.com/images/stills/bluemountains.jpg"); }
+
 /* Top Navbar */
 .navbar-ea {
   opacity: 0.8;
@@ -153,6 +156,25 @@ video {
   bottom: 0; }
   .footercontainer .footer {
     text-align: center; }
+
+/* Accordions */
+.panel-group {
+  margin-top: 1.4em;
+  opacity: 0.7;
+  box-shadow: 2px 2px 2px #000; }
+  .panel-group .panel-heading {
+    background: #000; }
+    .panel-group .panel-heading .panel-title a {
+      font-family: "Cinzel", serif;
+      font-size: 1.5em;
+      color: #fff;
+      text-decoration: none;
+      opacity: 1.0; }
+      .panel-group .panel-heading .panel-title a:hover {
+        font-weight: bold; }
+  .panel-group .panel-body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em; }
 
 /* Media Queries */
 @media (min-width: 320px) {
