@@ -31,10 +31,10 @@ class MainNavLinkTest extends TestCase
             ->click('privacy')
             ->seePageIs('/privacy/');
 
-//        $this->visit('/')
-//            ->click('faqs')
-//            ->seePageIs('/faqs/');
-//
+        $this->visit('/')
+            ->click('faqs')
+            ->seePageIs('/faqs/');
+
         $this->visit('/')
             ->click('support')
             ->seePageIs('/support/');

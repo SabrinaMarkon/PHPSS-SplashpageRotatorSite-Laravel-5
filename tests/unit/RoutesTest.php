@@ -33,10 +33,10 @@ class RoutesTest extends TestCase
 //
         $this->visit('forgot')
             ->see('Forgot Your Login?');
-//
-//        $this->visit('faqs')
-//            ->see('F.A.Q.');
-//
+
+        $this->visit('faqs')
+            ->see('F.A.Q.');
+
         $this->visit('terms')
             ->see('Terms');
 
@@ -45,6 +45,9 @@ class RoutesTest extends TestCase
 //
         $this->visit('support')
             ->see('Support');
+
+//        $this->visit('helpdesk')
+//            ->see('Helpdesk');
 //
 //        // MEMBER ROUTES
 //

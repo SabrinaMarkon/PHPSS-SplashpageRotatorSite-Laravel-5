@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Faq;
 use App\Models\Page;
 use App\Http\Controllers\Controller;
 use Session;
@@ -76,6 +77,20 @@ class PagesController extends Controller
         return view('pages.support');
     }
 
+    public function thankyou() {
+        $content = Page::where('slug', '=', 'thankyou')->first();
+        Session::flash('page', $content);
+        return view('pages.thankyou');
+    }
+
+    public function faqs($referid = null) {
+        $this->setreferid($referid);
+        // get the admin's content for the FAQ page if they've written any.
+        $page = Page::where('slug', '=', 'faqs')->first();
+        // get the questions and answers.
+        $faqs = Faq::orderBy('positionnumber', 'asc')->get();
+        return view('pages.faqs', compact('faqs', 'page'));
+    }
 
     public function success() {
         $content = Page::where('slug', '=', 'success')->first();

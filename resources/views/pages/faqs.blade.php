@@ -6,14 +6,14 @@
 @stop
 
 
-@section('pagetitle')
-
-    F.A.Q.
-
-@stop
-
-
 @section('content')
+
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            F.A.Q.
+        </div>
+    </div>
 
     @if($page)
         {!! $page->htmlcode !!}
@@ -33,19 +33,19 @@
                     </div>
                     @if($faq->positionnumber == 1)
                         <div class="panel-collapse collapse in" id="collapse{{ $faq->positionnumber }}">
-                            @else
-                                <div class="panel-collapse collapse" id="collapse{{ $faq->positionnumber }}">
-                                    @endif
-                                    <div class="panel-body">
-                                        <p>{{ $faq->answer }}</p>
-                                    </div>
-                                </div>
-                        </div>
-                        @endforeach
-
+                    @else
+                        <div class="panel-collapse collapse" id="collapse{{ $faq->positionnumber }}">
+                    @endif
+                            <div class="panel-body">
+                                <p>{{ $faq->answer }}</p>
+                            </div>
+                    </div>
                 </div>
+            @endforeach
 
         </div>
+
+    </div>
 
 @stop
 

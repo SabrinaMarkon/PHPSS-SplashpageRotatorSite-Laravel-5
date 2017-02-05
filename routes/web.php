@@ -25,6 +25,12 @@ Route::get('privacy', 'PagesController@privacy');
 Route::get('support/{referid}', 'PagesController@support');
 Route::get('support', 'PagesController@support');
 
+/*
+ *  Basic reading and display of database data
+ */
+Route::get('faqs/{referid}', 'PagesController@faqs');
+Route::get('faqs', 'PagesController@faqs');
+
 
 Route::get('join', function() {
     return view('pages.join');
@@ -40,10 +46,6 @@ Route::get('login', function() {
 
 Route::get('forgot', function() {
     return view('pages.forgot');
-});
-
-Route::get('faqs', function() {
-    return view('pages.faqs');
 });
 
 /* MEMBER ROUTES */
