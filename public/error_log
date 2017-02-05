@@ -1,0 +1,5 @@
+[05-Feb-2017 09:04:50 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[05-Feb-2017 09:04:53 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[05-Feb-2017 09:04:53 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[05-Feb-2017 09:04:53 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[05-Feb-2017 09:41:18 UTC] PHP Fatal error:  Class 'App\Http\Controllers\View' not found in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 20

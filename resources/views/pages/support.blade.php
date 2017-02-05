@@ -9,7 +9,7 @@
     <br><br>
     <div class="blacktransparent">
         <div class="title">
-            Support
+           {{ $sitename }} Support
         </div>
     </div>
 
