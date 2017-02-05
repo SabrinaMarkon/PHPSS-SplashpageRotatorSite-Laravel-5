@@ -13,13 +13,18 @@
 
 /* MAIN ROUTES */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('about/{referid}', 'PagesController@about');
+Route::get('about', 'PagesController@about');
 
-Route::get('about', function() {
-    return view('pages.about');
-});
+Route::get('terms/{referid}', 'PagesController@terms');
+Route::get('terms', 'PagesController@terms');
+
+Route::get('privacy/{referid}', 'PagesController@privacy');
+Route::get('privacy', 'PagesController@privacy');
+
+Route::get('support/{referid}', 'PagesController@support');
+Route::get('support', 'PagesController@support');
+
 
 Route::get('join', function() {
     return view('pages.join');
@@ -40,17 +45,6 @@ Route::get('forgot', function() {
 Route::get('faqs', function() {
     return view('pages.faqs');
 });
-
-Route::get('terms', function() {
-    return view('pages.terms');
-});
-
-Route::get('privacy', function() {
-    return view('pages.privacy');
-});
-
-Route::get('support/{referid}', 'PagesController@support');
-Route::get('support', 'PagesController@support');
 
 /* MEMBER ROUTES */
 
@@ -118,3 +112,10 @@ Route::get('{page}', 'PagesController@custompage');
 
 
 //Route::get('{page}/{referid}', 'PagesController@custompage');
+
+/*
+ * home page with optional referid. These are the last routes so they aren't used when the route is say,
+ * /about (where the 'about' would be misinterpreted as the referid).
+ */
+Route::get('/{referid}', 'PagesController@index');
+Route::get('/', 'PagesController@index');

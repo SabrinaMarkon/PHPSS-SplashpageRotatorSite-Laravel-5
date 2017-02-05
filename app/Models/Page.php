@@ -8,7 +8,7 @@ class Page extends Model
 {
     // testing:
     public function scopeshowCorePage($query, $take = 1) {
-        return $query->where('core', true)->take($take)->get();
+        return $query->where('core', true)->orderBy('id','desc')->take($take)->get();
         // could put get() on PageTest.php
         // Page::$pages->get() instead if desired.
     }

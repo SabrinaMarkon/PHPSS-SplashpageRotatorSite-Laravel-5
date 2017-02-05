@@ -9,15 +9,16 @@
 @section('content')
 
     <br><br>
-    <div class="blacktransparent">
-        <div class="title">
-            @if(!Session::has('page'))
+    @if(!Session::has('page'))
+        <div class="blacktransparent">
+            <div class="title">
                 404 Page Not Found
-            @endif
+            </div>
         </div>
-    </div>
+    @endif
 
     @if(Session::has('page'))
+        <br><br>
         {!! Session::get('page')->htmlcode !!}
     @endif
 

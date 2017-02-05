@@ -2,14 +2,6 @@
 
 @section('heading')
 
-    <script>
-        $(document).ready(function() {
-            $('#support-button').on('click', function( e ) {
-                window.open('helpdesk');
-            });
-        });
-    </script>
-
 @stop
 
 @section('content')
@@ -17,13 +9,13 @@
     <br><br>
     <div class="blacktransparent">
         <div class="title">
-            {{--{{ $sitename }}--}} Support
+            Support
         </div>
     </div>
 
     @if(Session::has('page'))
         {!! Session::get('page')->htmlcode !!}
-        <br><a href="helpdesk" class="btn btn-custom" role="button" target="_blank">Open Helpdesk</a>
+        <br><button id="support-button" class="btn btn-custom" role="button" target="_blank">Open Helpdesk</button>
     @endif
 
 @stop
@@ -31,6 +23,12 @@
 
 @section('footer')
 
-
+    <script>
+        $(document).ready(function() {
+            $('#support-button').on('click', function( e ) {
+                window.open('helpdesk');
+            });
+        });
+    </script>
 
 @stop

@@ -34,12 +34,12 @@ class PagesController extends Controller
         return view('pages.index', compact('referid'));
     }
 
-    public function home($referid = null) {
-        $this->setreferid($referid);
-        $content = Page::where('slug', '=', 'home')->first();
-        Session::flash('page', $content);
-        return view('pages.home', compact('referid'));
-    }
+//    public function home($referid = null) {
+//        $this->setreferid($referid);
+//        $content = Page::where('slug', '=', 'home')->first();
+//        Session::flash('page', $content);
+//        return view('pages.index', compact('referid'));
+//    }
 
 //    public function delete() {
 //        Session::set('user', null);
@@ -92,7 +92,7 @@ class PagesController extends Controller
     }
 
     public function custompage($page, $referid = null) {
-        //$this->setreferid($referid);
+        $this->setreferid($referid);
         $content = Page::where('slug', '=', $page)->first();
         Session::flash('page', $content);
         return view('pages.custompage');

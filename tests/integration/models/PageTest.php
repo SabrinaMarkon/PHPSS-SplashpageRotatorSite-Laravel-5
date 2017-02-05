@@ -19,14 +19,14 @@ class PageTest extends TestCase {
     And to phpunit.xml add
     <env name="DB_CONNECTION" value="mysql_testing"/>
     */
-    use DatabaseMigrations;
+    //use DatabaseMigrations;
 
 
     function setUp()
     {
         parent::setUp(); // was missing
 
-        $this->page = factory(Page::class)->create();
+//        $this->page = factory(Page::class)->create();
     }
 
     /** @test */
@@ -35,12 +35,13 @@ class PageTest extends TestCase {
 
         // Given ('given this world exists'):
 
-        // creates 4 non-core dummy pages and persists them to our test database.
-        factory(Page::class, 5)->create();
-
-        // create 1 more dummy pages but make them core (field in db) site pages.
-        $corePage = factory(Page::class)->create(['core' => true]);
-
+// UNCOMMENT BELOW IF WE WANT TO MAKE RANDOM FAKER DATA INSTEAD OF COPYING REAL DB EXACTLY.
+//        // creates 4 non-core dummy pages and persists them to our test database.
+//        factory(Page::class, 5)->create();
+//
+//        // create 1 more dummy pages but make them core (field in db) site pages.
+//        $corePage = factory(Page::class)->create(['core' => true]);
+//
 
 
         // When ('when I execute this action'):
@@ -51,7 +52,10 @@ class PageTest extends TestCase {
         // I expect that the first core page in the collection
         // will have htmlcode that is the same as what is
         // retrieved with the showpage() method above.
-        $this->assertEquals($corePage->htmlcode, $pages->first()->htmlcode);
+//  UNCOMMENT BELOW LINE IF WE CREATE FAKER ROWS INSTEAD OF COPY OF LIVE DB:
+//        $this->assertEquals($corePage->htmlcode, $pages->first()->htmlcode);
+        $this->visit($pages->first()->slug)
+            ->see($pages->first()->htmlcode);
         // how many records should be returned?
         // 'take' in Page.php indicates 1 only.
         $this->assertCount(1,$pages);
@@ -71,7 +75,7 @@ class PageTest extends TestCase {
         $pages = Page::countCustomPages();
         // how many non-core custom pages should be returned?
         // 'take' in Page.php indicates 4. There should be 4.
-        $this->assertCount(6, $pages);
+        $this->assertCount(13, $pages);
 
 
     }
