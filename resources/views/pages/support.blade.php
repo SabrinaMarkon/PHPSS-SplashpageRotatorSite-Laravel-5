@@ -12,15 +12,14 @@
 
 @stop
 
-
-@section('pagetitle')
-
-    {{ $sitename }} Support
-
-@stop
-
-
 @section('content')
+
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            {{--{{ $sitename }}--}} Support
+        </div>
+    </div>
 
     @if(Session::has('page'))
         {!! Session::get('page')->htmlcode !!}

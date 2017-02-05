@@ -62,17 +62,15 @@ class PageTest extends TestCase {
         $pages = Page::showCustomPage();
         // see if the html is viewed when we visit the slug url. Fails test if we haven't
         // set up dynamic url routing yet.
-//        $this->visit($pages->first()->slug)
-//            ->see($pages->first()->htmlcode);
-//        $this->visit($pages->slug)
-//            ->see($pages->htmlcode);
-//
-//
-//        // When:
-//        // method to get a collection, in this case 1 custom (non-core) page.
+        $this->visit($pages->first()->slug)
+            ->see($pages->first()->htmlcode);
+
+
+        // When:
+        // method to get a collection, in this case 1 custom (non-core) page.
         $pages = Page::countCustomPages();
-//        // how many non-core custom pages should be returned?
-//        // 'take' in Page.php indicates 4. There should be 4.
+        // how many non-core custom pages should be returned?
+        // 'take' in Page.php indicates 4. There should be 4.
         $this->assertCount(6, $pages);
 
 

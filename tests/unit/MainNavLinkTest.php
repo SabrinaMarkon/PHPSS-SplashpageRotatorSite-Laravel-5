@@ -35,9 +35,9 @@ class MainNavLinkTest extends TestCase
 //            ->click('faqs')
 //            ->seePageIs('/faqs/');
 //
-//        $this->visit('/')
-//            ->click('support')
-//            ->seePageIs('/support/');
+        $this->visit('/')
+            ->click('support')
+            ->seePageIs('/support/');
 //
 //        $this->visit('/')
 //            ->click('join')

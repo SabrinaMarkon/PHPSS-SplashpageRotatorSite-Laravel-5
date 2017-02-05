@@ -1,3 +1,11 @@
+@extends('layouts.main')
+
+@section('heading')
+
+
+@stop
+
+
 @section('content')
 
     <br><br>
@@ -11,8 +19,6 @@
 
     @if(Session::has('page'))
         {!! Session::get('page')->htmlcode !!}
-    @else
-        <div class="text-center"><a href="/">Main Page</a></div>
     @endif
 
 @stop

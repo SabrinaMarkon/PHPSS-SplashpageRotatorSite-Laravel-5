@@ -49,9 +49,8 @@ Route::get('privacy', function() {
     return view('pages.privacy');
 });
 
-Route::get('support', function() {
-    return view('pages.support');
-});
+Route::get('support/{referid}', 'PagesController@support');
+Route::get('support', 'PagesController@support');
 
 /* MEMBER ROUTES */
 

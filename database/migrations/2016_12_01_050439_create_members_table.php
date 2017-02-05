@@ -15,21 +15,21 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('userid', 255);
-            $table->string('password', 255);
+            $table->string('userid', 255)->default('');
+            $table->string('password', 255)->default('');
             $table->rememberToken();
             $table->string('referid', 255)->nullable();
-            $table->string('firstname', 255);
-            $table->string('lastname', 255);
+            $table->string('firstname', 255)->default('');
+            $table->string('lastname', 255)->default('');
             $table->string('email', 255)->unique();
             $table->char('verified', 1)->default(0);
-            $table->dateTime('signupdate');
-            $table->string('ip', 255);
-            $table->string('referringsite', 255);
+            $table->dateTime('signupdate')->nullable();
+            $table->string('ip', 255)->default('');
+            $table->string('referringsite', 255)->default('');
             $table->dateTime('lastlogin')->nullable();
             $table->char('vacation', 1)->default(0);
-            $table->dateTime('vacationdate');
-            $table->decimal('commission', 9, 2);
+            $table->dateTime('vacationdate')->nullable();
+            $table->decimal('commission', 9, 2)->default(0.00);
             $table->char('admin', 1)->default(0);
             $table->unique('userid');
             $table->timestamps();

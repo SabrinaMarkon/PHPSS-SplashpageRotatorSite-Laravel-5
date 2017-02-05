@@ -43,8 +43,8 @@ class RoutesTest extends TestCase
         $this->visit('privacy')
             ->see('Privacy');
 //
-//        $this->visit('support')
-//            ->see('Support');
+        $this->visit('support')
+            ->see('Support');
 //
 //        // MEMBER ROUTES
 //
