@@ -34,4 +34,8 @@ class MemberLoginController extends Controller
             return Redirect::to('login');
         }
     }
+
+
+
+    
 }

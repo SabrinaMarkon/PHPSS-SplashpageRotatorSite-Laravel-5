@@ -179,6 +179,32 @@ video {
     font-family: "Raleway", sans-serif;
     font-size: 1.5em; }
 
+/* Forms */
+.ea-bottompadding {
+  margin-bottom: 2em; }
+
+.ea-bottompaddingfat {
+  margin-bottom: 4em; }
+
+.btn-custom {
+  font-family: "Cinzel", serif;
+  background: #000;
+  border: 0;
+  order-radius: 6px;
+  padding: 15px;
+  color: #fff !important;
+  cursor: pointer;
+  opacity: 0.7; }
+  .btn-custom:hover {
+    background: #302c22;
+    opacity: 1.0;
+    font-weight: bold;
+    box-shadow: -1px -1px 2px #fff; }
+
+.form-control {
+  color: #302c22;
+  opacity: 0.7; }
+
 /* Media Queries */
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */

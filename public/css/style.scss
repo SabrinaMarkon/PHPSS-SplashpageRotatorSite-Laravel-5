@@ -3,6 +3,10 @@ $contentfont: "Raleway", sans-serif;
 $textshadow : 2px 2px 2px #000;
 $boxshadow : 2px 2px 2px #000;
 $boxshadowtop : -2px -2px 2px #000;
+$boxshadowtopsmaller : -1px -1px 2px #fff;
+$formcolor1 : #000;
+$formcolor2 : #302c22;
+$formcolor3 : #fff;
 
 body {
   padding: 0;
@@ -159,7 +163,7 @@ video { display: block; } /* IE 8 */
   width: 100%;
   min-height: 100px;
   margin-top: 4em;
-  box-shadow: -1px -1px 2px #fff;
+  box-shadow: $boxshadowtopsmaller;
 }
 .title {
   color: #fff;
@@ -214,6 +218,34 @@ video { display: block; } /* IE 8 */
     font-family: $contentfont;
     font-size: 1.5em;
   }
+}
+
+/* Forms */
+.ea-bottompadding {
+  margin-bottom: 2em;
+}
+.ea-bottompaddingfat {
+  margin-bottom: 4em;
+}
+.btn-custom {
+  font-family: $headingfont;
+  background: $formcolor1;
+  border: 0;
+  order-radius:6px;
+  padding: 15px;
+  color: $formcolor3 !important;
+  cursor: pointer;
+  opacity: 0.7;
+  &:hover {
+    background: $formcolor2;
+    opacity: 1.0;
+    font-weight: bold;
+    box-shadow: $boxshadowtopsmaller;
+  }
+}
+.form-control {
+  color: $formcolor2;
+  opacity: 0.7;
 }
 
 /* Media Queries */
