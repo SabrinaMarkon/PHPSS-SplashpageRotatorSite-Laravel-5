@@ -16,9 +16,9 @@ class MemberNavLinkTest extends TestCase
     {
         // AUTHENTICATED LINKS:
 
-//        $this->visit('/account')
-//            ->click('home')
-//            ->seePageIs('/');
+        $this->visit('/account')
+            ->click('home')
+            ->seePageIs('/');
 //
 //        $this->visit('/account')
 //            ->click('account')

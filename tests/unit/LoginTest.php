@@ -35,19 +35,24 @@ class LoginTest extends TestCase
             ->see('Incorrect Login');
     }
 
+
     /**
-     * Test to check login form shows /accounts members area if login is correct.
+     * Test to check that a logged in user can click the logout link
      *
      * @return void
      * @test
      */
-    public function does_a_correct_login_show_the_members_area_account_page()
+    public function can_a_logged_in_user_click_logout_link_and_see_home_page()
     {
         $this->visit('/login')
             ->type('sabrina', 'userid')
             ->type('testtest', 'password')
             ->press('login_button')
             ->seePageIs('/account/')
-            ->see('Welcome');
+            ->see('Welcome')
+            ->click('logout')
+            ->seePageIs('/')
+            ->see('Eagle Ads');
     }
+
 }

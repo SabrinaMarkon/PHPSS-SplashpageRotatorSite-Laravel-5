@@ -28,6 +28,8 @@ Route::get('privacy', 'PagesController@privacy');
 Route::get('support/{referid}', 'PagesController@support');
 Route::get('support', 'PagesController@support');
 
+Route::get('logout', 'PagesController@logout');
+
 /*
  *  Basic reading and display of database data
  */

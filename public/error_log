@@ -7,3 +7,4 @@
 [06-Feb-2017 04:46:51 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Member' not found in /home/eagleads/laravel/app/Http/Controllers/MemberLoginController.php on line 20
 [06-Feb-2017 04:52:04 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Member' not found in /home/eagleads/laravel/app/Http/Controllers/MemberLoginController.php on line 20
 [06-Feb-2017 04:58:12 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Member' not found in /home/eagleads/laravel/app/Http/Controllers/MemberLoginController.php on line 20
+[06-Feb-2017 06:00:22 UTC] PHP Fatal error:  Class 'Form' not found in /home/eagleads/laravel/storage/framework/views/4db7cd88e295e325999f5590736e064de4517741.php on line 20

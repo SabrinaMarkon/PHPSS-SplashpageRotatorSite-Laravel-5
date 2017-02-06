@@ -97,6 +97,11 @@ class PagesController extends Controller
         return view('pages.forgot');
     }
 
+    public function logout() {
+        Session::set('user', null);
+        return Redirect::to('/');
+    }
+
     public function custompage($page, $referid = null) {
         $this->setreferid($referid);
         $content = Page::where('slug', '=', $page)->first();
