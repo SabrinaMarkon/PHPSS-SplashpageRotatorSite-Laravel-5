@@ -14,7 +14,7 @@
 /* MAIN ROUTES */
 
 /*
- * Basic pages
+ * MOST BASIC PAGES
  */
 Route::get('about/{referid}', 'PagesController@about');
 Route::get('about', 'PagesController@about');
@@ -35,7 +35,7 @@ Route::get('faqs/{referid}', 'PagesController@faqs');
 Route::get('faqs', 'PagesController@faqs');
 
 /*
- *  Complex database functionality
+ * EXTERNAL PAGES WITH COMPLEX DATABASE INTERACTION
  */
 //Route::get('join/{referid}', 'PagesController@join');
 //Route::get('join', 'PagesController@join');
@@ -71,7 +71,7 @@ Route::get('forgot', function() {
     return view('pages.forgot');
 });
 
-/* MEMBER ROUTES */
+/* MEMBERS AREA ROUTES */
 
 Route::get('account', function() {
     return view('pages.account');
@@ -85,7 +85,7 @@ Route::get('promote', function() {
     return view('pages.promote');
 });
 
-/* ADMIN ROUTES */
+/* ADMIN AREA ROUTES */
 
 Route::get('admin', function () {
     return view('pages.admin.index');

@@ -11,7 +11,7 @@
     <br><br>
     <div class="blacktransparent">
         <div class="title">
-            Welcome to {{ $sitename }}
+            Welcome
         </div>
     </div>
 
