@@ -19,23 +19,23 @@
         {!! Session::get('page')->htmlcode !!}
     @endif
 
-    @if (Session::has('message'))
-        <div class="alert alert-danger">{{ Session::get('message') }}</div>
-    @endif
-
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+
+                @if (Session::has('message'))
+                    <div class="alert alert-danger ea-bottompaddingfat">{{ Session::get('message') }}</div>
+                @endif
+
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger ea-bottompaddingfat">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
                 <form action="{{ url('/login') }}" method="post" accept-charset="utf-8" class="form" role="form">
 
@@ -49,7 +49,7 @@
 
                     <span class="help-block ea-bottompadding"><a href="{{ url('forgot') }}">Forgot Password?</a></span>
 
-                    <button class="btn btn-lg btn-custom" type="submit" name="login">Login</button>
+                    <button class="btn btn-lg btn-custom" type="submit" id="login_button" name="login">Login</button>
 
                 </form>
 

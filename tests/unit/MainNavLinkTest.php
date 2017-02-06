@@ -47,6 +47,11 @@ class MainNavLinkTest extends TestCase
             ->click('login')
             ->seePageIs('/login/');
 
+        $this->visit('/login')
+            ->press('login_button')
+            ->seePageIs('/login/');
+
+
 //        $this->visit('/login')
 //            ->click('Forgot your login?')
 //            ->seePageIs('/forgot/');

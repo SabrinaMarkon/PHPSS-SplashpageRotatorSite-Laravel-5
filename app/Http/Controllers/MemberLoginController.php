@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Member;
 use App\Models\Page;
 use Session;
 use Redirect;
@@ -37,5 +38,5 @@ class MemberLoginController extends Controller
 
 
 
-    
+
 }
