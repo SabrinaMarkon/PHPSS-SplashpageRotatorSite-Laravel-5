@@ -24,4 +24,12 @@ class Controller extends BaseController
 
     }
 
+    public function setreferid($referid = null) {
+        if ($referid !== null) {
+            if (!Session::has('referid')) {
+                Session::set('referid', $referid);
+            }
+        }
+    }
+
 }

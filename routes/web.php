@@ -13,6 +13,9 @@
 
 /* MAIN ROUTES */
 
+/*
+ * Basic pages
+ */
 Route::get('about/{referid}', 'PagesController@about');
 Route::get('about', 'PagesController@about');
 
@@ -31,17 +34,37 @@ Route::get('support', 'PagesController@support');
 Route::get('faqs/{referid}', 'PagesController@faqs');
 Route::get('faqs', 'PagesController@faqs');
 
+/*
+ *  Complex database functionality
+ */
+//Route::get('join/{referid}', 'PagesController@join');
+//Route::get('join', 'PagesController@join');
+//Route::post('join', 'PagesController@joinpost');
+
+Route::get('success', 'PagesController@success');
+//
+//Route::get('verify/{code}', 'PagesController@verify');
+//Route::get('verify', 'PagesController@verify');
+
+Route::get('login/{referid}', 'MemberLoginController@login');
+Route::get('login', 'MemberLoginController@login');
+Route::post('login', 'MemberLoginController@loginpost');
+
+//Route::get('forgot/{referid}', 'PagesController@forgot');
+//Route::get('forgot', 'PagesController@forgot');
+//Route::post('forgot', 'PagesController@emaillogin');
+
+//Route::get('reset/{code}', 'PagesController@reset');
+//Route::get('reset', 'PagesController@reset');
+//Route::post('reset', 'PagesController@resetpost');
+//
+//Route::get('ipn', 'IPNsController@ipn'); // IPN url for license purchases.
+
+
+
 
 Route::get('join', function() {
     return view('pages.join');
-});
-
-Route::get('success', function() {
-    return view('pages.success');
-});
-
-Route::get('login', function() {
-    return view('pages.login');
 });
 
 Route::get('forgot', function() {

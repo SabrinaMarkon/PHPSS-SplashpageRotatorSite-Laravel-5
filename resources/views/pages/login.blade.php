@@ -6,11 +6,28 @@
 @stop
 
 
-@section('pagetitle')
+@section('content')
 
-    Member Login
+    <br><br>
+    <div class="blacktransparent">
+        <div class="title">
+            Member Login
+        </div>
+    </div>
+
+    @if(Session::has('page'))
+        {!! Session::get('page')->htmlcode !!}
+    @endif
 
 @stop
+
+
+@section('footer')
+
+
+
+@stop
+
 
 @section('content')
 
@@ -28,60 +45,30 @@
         </div>
     @endif
 
-    <div class="thisistheloginpage">
-        <div class="form-page-small">
-            <div class="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
 
-                <!-- Registration Form -->
-                <form class="register-form" id="register-form" role="form" method="post" action="{{ url('/join') }}">
-                    <input type="hidden" name="whichform" id="whichform" value="register">
-                    <input type="hidden" name="referid" id="referid" value="{{ $referid }}">
+                <h1 class="ja-bottompadding">Login</h1>
+
+                <form action="{{ url('/login') }}" method="post" accept-charset="utf-8" class="form" role="form">
+
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        <input type="text" placeholder="username" name="userid" id="userid" value="{{ old('userid') }}"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="password" name="password" id="password"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="confirm password" name="password_confirmation" id="password_confirm"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="first name" name="firstname" id="firstname" value="{{ old('firstname') }}"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="last name" name="lastname" id="lastname" value="{{ old('lastname') }}"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="email address" name="email" id="email" value="{{ old('email') }}"/>
-                    </div>
-                    <button>create</button>
-                    <p class="message">Already registered? <a href="#">Sign In</a></p>
+
+                    <label class="sr-only" for="userid">Username</label>
+                    <input type="text" id="userid" name="userid" value="{{ old('userid') }}" class="form-control input-lg" placeholder="Username">
+
+                    <label class="sr-only" for="password">Password</label>
+                    <input type="password" id="password" name="password" value="" class="form-control input-lg" placeholder="Password">
+
+                    <span class="help-block"><a href="{{ url('forgot') }}">Forgot Password?</a></span>
+
+                    <button class="btn btn-lg btn-primary" type="submit" name="login">Login</button>
+
                 </form>
 
-                <!-- Login Form -->
-                <form class="login-form" role="form" id="login-form" method="post" action="{{ url('/login') }}">
-                    <input type="hidden" name="whichform" id="whichform" value="login">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <input type="text" placeholder="username" name="userid" id="userid"  value="{{ old('userid') }}"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="password" name="password" id="password"/>
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label class="checkbox inline">
-                                <input type="checkbox" aria-label="Remember me" id="remember">Remember me
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <button>login</button>
-                        <p class="forgotlogin"><a href="{{ url('forgot') }}">Forgot your login?</a></p>
-                        <p class="message">Not registered? <a href="#">Create an account</a></p>
-                    </div>
-                </form>
+                <div class="ja-bottompadding"></div>
+
             </div>
         </div>
     </div>
@@ -89,13 +76,5 @@
 
 
 @section('footer')
-
-    <script>
-        $('.message a').click(function(){
-            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-            if ($('.title').text() == 'Join Us!' ? $('.title').text('Member Login') : $('.title').text('Join Us!'));
-            $('.alert ').hide();
-        });
-    </script>
 
 @stop

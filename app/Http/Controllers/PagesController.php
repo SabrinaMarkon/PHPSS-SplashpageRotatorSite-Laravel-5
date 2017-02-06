@@ -20,14 +20,6 @@ class PagesController extends Controller
         return $num1 + $num2;
     }
 
-    public function setreferid($referid = null) {
-        if ($referid !== null) {
-            if (!Session::has('referid')) {
-                Session::set('referid', $referid);
-            }
-        }
-    }
-
     public function index($referid = null) {
         $this->setreferid($referid);
         $content = Page::where('slug', '=', 'home')->first();
@@ -97,7 +89,6 @@ class PagesController extends Controller
         Session::flash('page', $content);
         return view('pages.success');
     }
-
 
     public function forgot($referid = null) {
         $this->setreferid($referid);
