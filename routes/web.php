@@ -37,11 +37,11 @@ Route::get('faqs/{referid}', 'PagesController@faqs');
 Route::get('faqs', 'PagesController@faqs');
 
 /*
- * EXTERNAL PAGES WITH COMPLEX DATABASE INTERACTION
+ * OUTER SITE PAGES WITH COMPLEX DATABASE INTERACTION
  */
-//Route::get('join/{referid}', 'PagesController@join');
-//Route::get('join', 'PagesController@join');
-//Route::post('join', 'PagesController@joinpost');
+Route::get('join/{referid}', 'MemberJoinController@join');
+Route::get('join', 'MemberJoinController@join');
+Route::post('join', 'MemberJoinController@joinpost');
 
 Route::get('success', 'PagesController@success');
 //

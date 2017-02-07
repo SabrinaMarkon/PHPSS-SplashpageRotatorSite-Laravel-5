@@ -22,9 +22,9 @@ class RoutesTest extends TestCase
         $this->visit('about')
             ->see('About Us');
 
-//        $this->visit('join')
-//            ->see('Join Us');
-//
+        $this->visit('join')
+            ->see('Register');
+
         $this->visit('success')
             ->see('Thanks!');
 

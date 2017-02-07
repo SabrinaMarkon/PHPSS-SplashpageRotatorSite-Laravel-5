@@ -36,6 +36,12 @@ body {
 .body_faqs {
   background-image: url('http://eagleads.phpsitescripts.com/images/stills/bluemountains.jpg');
 }
+.body_login {
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg');
+}
+.body_join {
+  background-image: url('http://eagleads.phpsitescripts.com/images/stills/rivervalley.jpg');
+}
 /* Top Navbar */
 .navbar-ea {
   opacity: 0.8;
@@ -246,6 +252,9 @@ video { display: block; } /* IE 8 */
 .form-control {
   color: $formcolor2;
   opacity: 0.7;
+}
+.help-block {
+  color: #fff;
 }
 
 /* Media Queries */
