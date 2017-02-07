@@ -21,7 +21,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div id="errorwrap" class="col-md-6 col-md-offset-3">
 
                 @if (Session::has('message'))
                     <div class="alert alert-danger ea-bottompaddingfat">{{ Session::get('message') }}</div>

@@ -20,7 +20,7 @@ class LoginTest extends TestCase
     }
 
     /**
-     * Test to check login form gives incorrect login error if user doesn't exit.
+     * Test to check login form gives incorrect login error if user doesn't exist.
      *
      * @return void
      * @test

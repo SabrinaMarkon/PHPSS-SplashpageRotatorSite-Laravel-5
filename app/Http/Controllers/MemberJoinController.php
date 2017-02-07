@@ -46,8 +46,10 @@ class MemberJoinController extends Controller
             $signupdate = new DateTime();
             $signupdate = $signupdate->format('Y-m-d');
             $member->signupdate = $signupdate;
-            $member->ip = $_SERVER['REMOTE_ADDR'];
-            $member->referringsite = $_SERVER['HTTP_REFERER'];
+            $remote_addr = isset($_SERVER['REMOTE_ADDR'])? $_SERVER['REMOTE_ADDR']:'127.0.0.1';
+            $member->ip = $remote_addr;
+            $http_referer = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']:'';
+            $member->referringsite = $http_referer;
 
             // validation email:
             $verification_code = str_random(30);
@@ -66,12 +68,12 @@ class MemberJoinController extends Controller
                 .$request->get('sitename')." Admin<br>"
                 ."".$request->get('domain')."<br><br><br>";
 
-            Mail::send(array(), array(), function ($message) use ($html, $request) {
-                $message->to($request->get('email'), $request->get('firstname') . ' ' . $request->get('lastname'))
-                    ->subject($request->get('sitename') . ' Welcome Verification')
-                    ->from($request->get('adminemail'), $request->get('adminname'))
-                    ->setBody($html, 'text/html');
-            });
+//            \Mail::send(array(), array(), function ($message) use ($html, $request) {
+//                $message->to($request->get('email'), $request->get('firstname') . ' ' . $request->get('lastname'))
+//                    ->subject($request->get('sitename') . ' Welcome Verification')
+//                    ->from($request->get('adminemail'), $request->get('adminname'))
+//                    ->setBody($html, 'text/html');
+//            });
             // end validation email
 
             // email admin.
@@ -80,12 +82,12 @@ class MemberJoinController extends Controller
                 ."UserID: " . $member->userid . "<br>"
                 . "Sponsor: " . $member->referid . "<br><br>"
                 . "" . $request->get('domain') . "<br><br><br>";
-            \Mail::send(array(), array(), function ($message) use ($html, $request) {
-                $message->to($request->get('adminemail'), $request->get('adminname'))
-                    ->subject($request->get('sitename') . ' New Member Notification')
-                    ->from($request->get('adminemail'), $request->get('adminname'))
-                    ->setBody($html, 'text/html');
-            });
+//            \Mail::send(array(), array(), function ($message) use ($html, $request) {
+//                $message->to($request->get('adminemail'), $request->get('adminname'))
+//                    ->subject($request->get('sitename') . ' New Member Notification')
+//                    ->from($request->get('adminemail'), $request->get('adminname'))
+//                    ->setBody($html, 'text/html');
+//            });
 
             // email sponsor.
             $referid = Member::where('userid', '=', $member->referid)->first();
@@ -100,12 +102,12 @@ class MemberJoinController extends Controller
                 . "A new referral just joined under you in " . $request->get('sitename') . "!<br>"
                 ."UserID: " . $member->userid . "<br><br>"
                 . "" . $request->get('domain') . "<br><br><br>";
-            \Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
-                $message->to($refemail, $refname)
-                    ->subject(' You Have a New Referral at ' . $request->get('sitename'))
-                    ->from($request->get('adminemail'), $request->get('adminname'))
-                    ->setBody($html, 'text/html');
-            });
+//            \Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
+//                $message->to($refemail, $refname)
+//                    ->subject(' You Have a New Referral at ' . $request->get('sitename'))
+//                    ->from($request->get('adminemail'), $request->get('adminname'))
+//                    ->setBody($html, 'text/html');
+//            });
 
             $member->save();
             return Redirect::to('success');

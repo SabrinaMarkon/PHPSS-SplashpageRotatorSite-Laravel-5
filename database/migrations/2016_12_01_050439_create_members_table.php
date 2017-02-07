@@ -22,6 +22,7 @@ class CreateMembersTable extends Migration
             $table->string('firstname', 255)->default('');
             $table->string('lastname', 255)->default('');
             $table->string('email', 255)->unique();
+            $table->string('verification_code', 255)->nullable();
             $table->char('verified', 1)->default(0);
             $table->dateTime('signupdate')->nullable();
             $table->string('ip', 255)->default('');
