@@ -29,7 +29,7 @@
 
                 @if (count($errors) > 0)
                     <div class="alert alert-danger ea-bottompaddingfat">
-                        <ul>
+                        <ul class="errorlist text-center">
                             @foreach ($errors->all() as $error)
                                 <li>{{ $error }}</li>
                             @endforeach
@@ -57,7 +57,7 @@
                     <input type="text" id="lastname" name="lastname" value="{{ old('lastname') }}" class="form-control input-lg ea-bottompadding" placeholder="Last Name">
 
                     <label class="sr-only" for="email">Email</label>
-                    <input type="text" id="email" name="email" value="{{ old('email') }}" class="form-control input-lg ea-bottompadding" placeholder="Last Name">
+                    <input type="text" id="email" name="email" value="{{ old('email') }}" class="form-control input-lg ea-bottompadding" placeholder="Email">
 
                     <button class="btn btn-lg btn-custom" type="submit" id="join_button" name="join">Register</button>
 

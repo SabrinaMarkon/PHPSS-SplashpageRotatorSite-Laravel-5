@@ -256,6 +256,15 @@ video { display: block; } /* IE 8 */
 .help-block {
   color: #fff;
 }
+.alert {
+  .errorlist {
+    width: 50%;
+    margin: 0 auto;
+    li {
+      text-align: left;
+    }
+  }
+}
 
 /* Media Queries */
 @media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */
