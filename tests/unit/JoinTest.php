@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Models\Member;
 
 class JoinTest extends TestCase
 {
@@ -48,6 +49,10 @@ class JoinTest extends TestCase
      */
     public function does_success_page_show_the_registration_form_when_correct()
     {
+        // delete record to reset:
+        Member::where('userid', 'successuser')->delete();
+
+        // test adding member using registration form.
         $this->visit('/join')
             ->type('successuser', 'userid')
             ->type('successpass', 'password')

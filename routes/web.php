@@ -52,9 +52,9 @@ Route::get('login/{referid}', 'MemberLoginController@login');
 Route::get('login', 'MemberLoginController@login');
 Route::post('login', 'MemberLoginController@loginpost');
 
-//Route::get('forgot/{referid}', 'PagesController@forgot');
-//Route::get('forgot', 'PagesController@forgot');
-//Route::post('forgot', 'PagesController@emaillogin');
+Route::get('forgot/{referid}', 'ForgotLoginController@forgot');
+Route::get('forgot', 'ForgotLoginController@forgot');
+Route::post('forgot', 'ForgotLoginController@emaillogin');
 
 //Route::get('reset/{code}', 'PagesController@reset');
 //Route::get('reset', 'PagesController@reset');

@@ -90,13 +90,6 @@ class PagesController extends Controller
         return view('pages.success');
     }
 
-    public function forgot($referid = null) {
-        $this->setreferid($referid);
-        $content = Page::where('slug', '=', 'forgot')->first();
-        Session::flash('page', $content);
-        return view('pages.forgot');
-    }
-
     public function logout() {
         Session::set('user', null);
         return Redirect::to('/');
