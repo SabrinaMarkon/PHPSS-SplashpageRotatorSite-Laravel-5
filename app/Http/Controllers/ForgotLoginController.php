@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
-use Session;
+use App\Models\PasswordReset;
+use Mail;
 use Redirect;
+use Session;
 
 class ForgotLoginController extends Controller
 {
@@ -58,4 +60,6 @@ class ForgotLoginController extends Controller
         }
         return Redirect::to('forgot');
     }
+
+
 }

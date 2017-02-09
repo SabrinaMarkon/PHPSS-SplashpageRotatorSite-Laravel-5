@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Member;
 use App\Models\Page;
-use Session;
-use Redirect;
-use Validator;
 use DateTime;
 use Mail;
+use Redirect;
+use Session;
+use Validator;
 
 class MemberJoinController extends Controller
 {
@@ -68,12 +68,12 @@ class MemberJoinController extends Controller
                 .$request->get('sitename')." Admin<br>"
                 ."".$request->get('domain')."<br><br><br>";
 
-//            \Mail::send(array(), array(), function ($message) use ($html, $request) {
-//                $message->to($request->get('email'), $request->get('firstname') . ' ' . $request->get('lastname'))
-//                    ->subject($request->get('sitename') . ' Welcome Verification')
-//                    ->from($request->get('adminemail'), $request->get('adminname'))
-//                    ->setBody($html, 'text/html');
-//            });
+            Mail::send(array(), array(), function ($message) use ($html, $request) {
+                $message->to($request->get('email'), $request->get('firstname') . ' ' . $request->get('lastname'))
+                    ->subject($request->get('sitename') . ' Welcome Verification')
+                    ->from($request->get('adminemail'), $request->get('adminname'))
+                    ->setBody($html, 'text/html');
+            });
             // end validation email
 
             // email admin.
@@ -102,7 +102,8 @@ class MemberJoinController extends Controller
                 . "A new referral just joined under you in " . $request->get('sitename') . "!<br>"
                 ."UserID: " . $member->userid . "<br><br>"
                 . "" . $request->get('domain') . "<br><br><br>";
-//            \Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
+
+//            Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
 //                $message->to($refemail, $refname)
 //                    ->subject(' You Have a New Referral at ' . $request->get('sitename'))
 //                    ->from($request->get('adminemail'), $request->get('adminname'))
