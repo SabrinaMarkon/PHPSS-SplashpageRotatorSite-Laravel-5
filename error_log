@@ -204,3 +204,4 @@ Stack trace:
 #2 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(154): Illuminate\Foundation\Application->make('Illuminate\\Cont...')
 #3 /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(79): Illuminate\Foundation\Bootstrap\HandleExceptions->getExceptionHandler()
 #4 /home/eagleads/laravel/vendor/laravel/framework/src/Il in /home/eagleads/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 763
+[10-Feb-2017 07:48:58 UTC] PHP Fatal error:  Class 'App\Providers\Setting' not found in /home/eagleads/laravel/app/Providers/SiteSettingsServiceProvider.php on line 16

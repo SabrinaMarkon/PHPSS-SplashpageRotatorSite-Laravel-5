@@ -55,37 +55,37 @@ class MemberJoinController extends Controller
             $verification_code = str_random(30);
             $member->verification_code = $verification_code;
             $html = "Dear ".$member->firstname.",<br><br>"
-                ."Welcome to " . $request->get('sitename') . "!<br><br>"
+                ."Welcome to " . config('sitename') . "!<br><br>"
                 ."Your UserID: " . $member->userid . "<br>"
                 ."Your Password: " . $request->get('password') . "<br>"
                 ."Login URL: <a href="
-                .$request->get('domain')."/login>"
-                .$request->get('domain')."/login</a><br><br>"
+                .config('domain')."/login>"
+                .config('domain')."/login</a><br><br>"
                 ."Please verify your email address by clicking this link:<br><br><a href="
-                .$request->get('domain')."/verify/".$verification_code.">"
-                .$request->get('domain')."/verify/".$verification_code."</a><br><br>"
+                .config('domain')."/verify/".$verification_code.">"
+                .config('domain')."/verify/".$verification_code."</a><br><br>"
                 ."Thank you!<br><br>"
-                .$request->get('sitename')." Admin<br>"
-                ."".$request->get('domain')."<br><br><br>";
+                .config('sitename')." Admin<br>"
+                ."".config('domain')."<br><br><br>";
 
             Mail::send(array(), array(), function ($message) use ($html, $request) {
                 $message->to($request->get('email'), $request->get('firstname') . ' ' . $request->get('lastname'))
-                    ->subject($request->get('sitename') . ' Welcome Verification')
-                    ->from($request->get('adminemail'), $request->get('adminname'))
+                    ->subject(config('sitename') . ' Welcome Verification')
+                    ->from(config('adminemail'), config('adminname'))
                     ->setBody($html, 'text/html');
             });
             // end validation email
 
             // email admin.
-            $html = "Dear " . $request->get('adminname') . ",<br><br>"
-                . "A new member just joined" . $request->get('sitename') . "!<br>"
+            $html = "Dear " . config('adminname') . ",<br><br>"
+                . "A new member just joined" . config('sitename') . "!<br>"
                 ."UserID: " . $member->userid . "<br>"
                 . "Sponsor: " . $member->referid . "<br><br>"
-                . "" . $request->get('domain') . "<br><br><br>";
+                . "" . config('domain') . "<br><br><br>";
 //            \Mail::send(array(), array(), function ($message) use ($html, $request) {
-//                $message->to($request->get('adminemail'), $request->get('adminname'))
-//                    ->subject($request->get('sitename') . ' New Member Notification')
-//                    ->from($request->get('adminemail'), $request->get('adminname'))
+//                $message->to(config('adminemail'), config('adminname'))
+//                    ->subject(config('sitename') . ' New Member Notification')
+//                    ->from(config('adminemail'), config('adminname'))
 //                    ->setBody($html, 'text/html');
 //            });
 
@@ -95,18 +95,18 @@ class MemberJoinController extends Controller
                 $refemail = $referid->email;
                 $refname = $referid->firstname . ' ' . $referid->lastname;
             } else {
-                $refemail = $request->get('adminemail');
-                $refname = $request->get('adminname');
+                $refemail = config('adminemail');
+                $refname = config('adminname');
             }
             $html = "Dear " . $refname . ",<br><br>"
-                . "A new referral just joined under you in " . $request->get('sitename') . "!<br>"
+                . "A new referral just joined under you in " . config('sitename') . "!<br>"
                 ."UserID: " . $member->userid . "<br><br>"
-                . "" . $request->get('domain') . "<br><br><br>";
+                . "" . config('domain') . "<br><br><br>";
 
 //            Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
 //                $message->to($refemail, $refname)
-//                    ->subject(' You Have a New Referral at ' . $request->get('sitename'))
-//                    ->from($request->get('adminemail'), $request->get('adminname'))
+//                    ->subject(' You Have a New Referral at ' . config('sitename'))
+//                    ->from(config('adminemail'), config('adminname'))
 //                    ->setBody($html, 'text/html');
 //            });
 

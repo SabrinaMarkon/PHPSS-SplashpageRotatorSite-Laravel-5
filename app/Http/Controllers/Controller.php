@@ -13,17 +13,6 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-//    public $settings;
-//
-//    public function __construct()
-//    {
-//        $settings = Setting::pluck('setting', 'name');
-//        foreach ($settings as $key => $val) {
-//            View::share( $key, $val );
-//        }
-//
-//    }
-
     public function setreferid($referid = null) {
         if ($referid !== null) {
             if (!Session::has('referid')) {
