@@ -20,7 +20,7 @@
             <h2>targeted Christian advertising</h2>
         </div>
         <video autoplay muted loop poster="http://eagleads.phpsitescripts.com/images/stills/greenmountaincross.jpg" id="bgvideo">
-            <source src="http://eagleads.phpsitescripts.com/images/eaglesflight-highquality.mp4" type="video/mp4">
+            <source src="http://eagleads.phpsitescripts.com/images/eaglesflight-lowquality.mp4" type="video/mp4">
         </video>
     </div>
 

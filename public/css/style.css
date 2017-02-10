@@ -54,6 +54,8 @@ body {
         text-shadow: 2px 2px 1px #fff, -2px -2px 1px #fff; }
       .navbar-ea .navbar-nav li:hover {
         background: #eee; }
+      .navbar-ea .navbar-nav li .active {
+        background: red; }
 
 /* Sections */
 .fixed-bg {
@@ -177,7 +179,7 @@ video {
   .panel-group .panel-heading {
     background: #000; }
     .panel-group .panel-heading .panel-title a {
-      font-family: "Cinzel", serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1.5em;
       font-weight: bold;
       text-decoration: none;

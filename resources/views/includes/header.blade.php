@@ -10,24 +10,24 @@
         <div class="navbar-collapse collapse text-center" id="main_navbar">
             @if (Session::has('user'))
                 <ul class="nav navbar-nav">
-                    <li><a href="/"><i class="fa fa-home"></i>home</a></li>
-                    <li><a href="/account">account</a></li>
-                    <li><a href="/profile">profile</a></li>
-                    <li><a href="/promote">promote</a></li>
-                    <li><a href="/faqs/">faqs</a></li>
-                    <li><a href="/support/">support</a></li>
-                    <li><a href="/logout">logout</a></li>
+                    <li><a href="/" id="home"><i class="fa fa-home"></i>home</a></li>
+                    <li><a href="/account" id="account">account</a></li>
+                    <li><a href="/profile" id="profile">profile</a></li>
+                    <li><a href="/promote" id="promote">promote</a></li>
+                    <li><a href="/faqs/" id="faqs">faqs</a></li>
+                    <li><a href="/support/" id="support">support</a></li>
+                    <li><a href="/logout" id="logout">logout</a></li>
                 </ul>
             @else
                 <ul class="nav navbar-nav">
-                    <li><a href="/"><i class="fa fa-home"></i>home</a></li>
-                    <li><a href="/about/">about</a></li>
-                    <li><a href="/terms/">terms</a></li>
-                    <li><a href="/privacy/">privacy</a></li>
-                    <li><a href="/faqs/">faqs</a></li>
-                    <li><a href="/support/">support</a></li>
-                    <li><a href="/join/">join</a></li>
-                    <li><a href="/login/">login</a></li>
+                    <li><a href="/" id="home"><i class="fa fa-home"></i>home</a></li>
+                    <li><a href="/about/" id="about">about</a></li>
+                    <li><a href="/terms/" id="terms">terms</a></li>
+                    <li><a href="/privacy/" id="privacy">privacy</a></li>
+                    <li><a href="/faqs/" id="faqs">faqs</a></li>
+                    <li><a href="/support/" id="support">support</a></li>
+                    <li><a href="/join/" id="join">join</a></li>
+                    <li><a href="/login/" id="login">login</a></li>
                 </ul>
             @endif
         </div> <!-- navbar-collapse -->

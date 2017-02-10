@@ -66,6 +66,9 @@ body {
       &:hover {
         background: #eee;
       }
+      .active {
+        background: red;
+      }
     }
   }
 }
@@ -212,7 +215,7 @@ video { display: block; } /* IE 8 */
     background: #000;
     .panel-title {
       a {
-        font-family: $headingfont;
+        font-family: $contentfont;
         font-size: 1.5em;
         font-weight: bold;
         text-decoration: none;

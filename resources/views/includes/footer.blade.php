@@ -13,3 +13,11 @@
     document.createElement('video');
 </script>
 <![endif]-->
+<script>
+    var whereami = this.location.pathname;
+    var res = whereami.replace("/", "");
+    if (res === '') {
+        res = 'home';
+    }
+    $('#' + res).parents('li,ul').addClass('active');
+</script>
