@@ -78,16 +78,16 @@ class MemberJoinController extends Controller
 
             // email admin.
             $html = "Dear " . config('adminname') . ",<br><br>"
-                . "A new member just joined" . config('sitename') . "!<br>"
+                . "A new member just joined " . config('sitename') . "!<br>"
                 ."UserID: " . $member->userid . "<br>"
                 . "Sponsor: " . $member->referid . "<br><br>"
                 . "" . config('domain') . "<br><br><br>";
-//            \Mail::send(array(), array(), function ($message) use ($html, $request) {
-//                $message->to(config('adminemail'), config('adminname'))
-//                    ->subject(config('sitename') . ' New Member Notification')
-//                    ->from(config('adminemail'), config('adminname'))
-//                    ->setBody($html, 'text/html');
-//            });
+            Mail::send(array(), array(), function ($message) use ($html, $request) {
+                $message->to(config('adminemail'), config('adminname'))
+                    ->subject(config('sitename') . ' New Member Notification')
+                    ->from(config('adminemail'), config('adminname'))
+                    ->setBody($html, 'text/html');
+            });
 
             // email sponsor.
             $referid = Member::where('userid', '=', $member->referid)->first();
@@ -103,12 +103,12 @@ class MemberJoinController extends Controller
                 ."UserID: " . $member->userid . "<br><br>"
                 . "" . config('domain') . "<br><br><br>";
 
-//            Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
-//                $message->to($refemail, $refname)
-//                    ->subject(' You Have a New Referral at ' . config('sitename'))
-//                    ->from(config('adminemail'), config('adminname'))
-//                    ->setBody($html, 'text/html');
-//            });
+            Mail::send(array(), array(), function ($message) use ($html, $refemail, $refname, $request) {
+                $message->to($refemail, $refname)
+                    ->subject(' You Have a New Referral at ' . config('sitename'))
+                    ->from(config('adminemail'), config('adminname'))
+                    ->setBody($html, 'text/html');
+            });
 
             $member->save();
             return Redirect::to('success');
