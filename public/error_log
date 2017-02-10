@@ -8,3 +8,10 @@
 [06-Feb-2017 04:52:04 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Member' not found in /home/eagleads/laravel/app/Http/Controllers/MemberLoginController.php on line 20
 [06-Feb-2017 04:58:12 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Member' not found in /home/eagleads/laravel/app/Http/Controllers/MemberLoginController.php on line 20
 [06-Feb-2017 06:00:22 UTC] PHP Fatal error:  Class 'Form' not found in /home/eagleads/laravel/storage/framework/views/4db7cd88e295e325999f5590736e064de4517741.php on line 20
+[10-Feb-2017 05:55:35 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 19
+[10-Feb-2017 05:57:35 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[10-Feb-2017 05:57:49 UTC] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[10-Feb-2017 05:58:20 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/eagleads/laravel/app/Http/Controllers/Controller.php on line 18
+[10-Feb-2017 06:02:31 UTC] PHP Fatal error:  Cannot call constructor in /home/eagleads/laravel/app/Http/Controllers/MemberJoinController.php on line 18
+[10-Feb-2017 06:29:14 UTC] PHP Fatal error:  Class 'App\Providers\Setting' not found in /home/eagleads/laravel/app/Providers/AppServiceProvider.php on line 16
+[10-Feb-2017 06:29:37 UTC] PHP Fatal error:  Class 'App\Providers\View' not found in /home/eagleads/laravel/app/Providers/AppServiceProvider.php on line 19

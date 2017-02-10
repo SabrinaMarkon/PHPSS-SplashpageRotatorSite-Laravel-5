@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Setting;
+use View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $settings = Setting::pluck('setting', 'name');
+        View::share('settings', $settings);
+        foreach ($settings as $key => $val) {
+            View::share( $key, $val );
+        }
     }
 
     /**

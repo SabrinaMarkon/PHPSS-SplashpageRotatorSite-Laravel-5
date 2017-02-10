@@ -11,7 +11,7 @@
     <br><br>
     <div class="blacktransparent">
         <div class="title">
-            Thanks!
+            Thanks! {{ $settings['sitename'] }}
         </div>
     </div>
 
