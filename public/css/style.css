@@ -201,7 +201,7 @@ video {
   font-family: "Cinzel", serif;
   background: #000;
   border: 0;
-  order-radius: 6px;
+  border-radius: 6px;
   padding: 15px;
   color: #fff !important;
   cursor: pointer;

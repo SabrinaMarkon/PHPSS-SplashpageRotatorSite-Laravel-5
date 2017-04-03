@@ -243,7 +243,7 @@ video { display: block; } /* IE 8 */
   font-family: $headingfont;
   background: $formcolor1;
   border: 0;
-  order-radius:6px;
+  border-radius:6px;
   padding: 15px;
   color: $formcolor3 !important;
   cursor: pointer;
